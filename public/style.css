@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #e0e0e0;
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 480px;
+    height: 90vh;
+    background: #1e1e1e;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #333;
+}
+
+.chat-header {
+    background: linear-gradient(135deg, #ff7a00, #ff5200);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.header-info h1 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.header-info p {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    scroll-behavior: smooth;
+}
+
+.message {
+    display: flex;
+    max-width: 85%;
+}
+
+.message.user {
+    align-self: flex-end;
+}
+
+.message.bot {
+    align-self: flex-start;
+}
+
+.msg-content {
+    padding: 12px 16px;
+    border-radius: 18px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.message.user .msg-content {
+    background: #ff7a00;
+    color: white;
+    border-bottom-right-radius: 4px;
+}
+
+.message.bot .msg-content {
+    background: #2d2d2d;
+    color: #e0e0e0;
+    border-bottom-left-radius: 4px;
+}
+
+.chat-input-area {
+    display: flex;
+    padding: 15px;
+    background: #1e1e1e;
+    border-top: 1px solid #333;
+    gap: 10px;
+}
+
+#user-input {
+    flex: 1;
+    padding: 12px 15px;
+    border-radius: 25px;
+    border: 1px solid #444;
+    background: #2d2d2d;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+#user-input:focus {
+    border-color: #ff7a00;
+}
+
+#send-btn {
+    padding: 10px 20px;
+    background: #ff7a00;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+#send-btn:hover {
+    background: #ff5200;
+    transform: scale(1.05);
+}
+
+.thinking {
+    font-style: italic;
+    opacity: 0.7;
+}
